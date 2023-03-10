@@ -15,6 +15,9 @@ int x2 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Value for y2: ");
 int y2 = Convert.ToInt32(Console.ReadLine());
 
-int distance = ((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
-Double result = Math.Sqrt(distance);
-Console.WriteLine(result);
+// int distance = ((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+// Double result = Math.Sqrt(distance);
+// Console.WriteLine(result);
+
+double distance = Math.Sqrt(Math.Pow((x1 - x2), 2) + Math.Pow((y1 - y2), 2));
+Console.WriteLine("The distance between the points is " + distance);
