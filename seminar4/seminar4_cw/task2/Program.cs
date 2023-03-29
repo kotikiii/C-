@@ -11,12 +11,12 @@ int numberOfDigit(int n)
     int digits = 1;
     while (n > 10)
     {
-        n /= 10;
+        n = n / 10;
         digits++;
     }
     return digits;
 }
 
-int number = Convert.ToInt32(Console.ReadLine());
-int res = numberOfDigit(number);
-Console.WriteLine(res);
+// int number = Convert.ToInt32(Console.ReadLine());
+// int res = numberOfDigit(number);
+Console.WriteLine( numberOfDigit(Convert.ToInt32(Console.ReadLine())));
