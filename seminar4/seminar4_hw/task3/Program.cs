@@ -1,37 +1,31 @@
 ﻿
-//Напишите программу, которая задаёт массив из 8 элементов 
-//и выводит их на экран. Данные вводятся с консоли пользователем
+//Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+//1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+//6, 1, 33 -> [6, 1, 33]
 
 
-int messageToUser(string mes)
+int length = Convert.ToInt32(Console.ReadLine());
+
+int[] FillRandomArray(int length)
 {
-    Console.Write(mes);
-    int infoFromUser = Convert.ToInt32(Console.ReadLine());
-    return infoFromUser;
-}
+    int[] array = new int[length];
+    Random random = new Random();
 
-int [] massive(int size, int minValue, int maxValue)
-{
-    int[] array = new int[size];
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < length; i++)
     {
-        array[i] = Random.Shared.Next(minValue, maxValue + 1);
+        array[i] = random.Next(1, 31);
     }
     return array;
 }
- void PrintArray ( int[] array )
- {
-    Console.Write("{");
-    for (int i = 0; i < array.Length; i++)
+
+void Print(int[] arr)
+{
+    int j = 0;
+    while (j < arr.Length)
     {
-        Console.Write($"{array[i]},  ");
+        Console.Write(arr[j] + " ");
+        j++;
     }
-    Console.Write("}");
- }
+}
 
-int size = messageToUser("pull length of a massive ");
-int MinValue = messageToUser("pull min value ");
-int MaxValue = messageToUser("pull max value ");
-int [] fillArray = massive( size, MinValue, MaxValue);
-PrintArray (fillArray);
-
+Print(FillRandomArray(length));

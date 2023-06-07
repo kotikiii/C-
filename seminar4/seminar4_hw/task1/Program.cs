@@ -13,7 +13,7 @@ int userNumber(string messageToUser)
 int A = userNumber("Pull number A: ");
 int B = userNumber("Pull number B: ");
 
-int power(int A)
+int Power(int A, int B)
 {
     int AofB = 1;
     for (int i = 1; i <= B; i++)
@@ -23,7 +23,7 @@ int power(int A)
     return AofB;
 }
 
-int result = power(A);
+int result = Power(A, B);
 Console.WriteLine(result);
 
 
