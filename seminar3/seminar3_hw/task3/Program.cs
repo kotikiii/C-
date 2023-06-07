@@ -5,7 +5,7 @@
 // 5 -> 1, 8, 27, 64, 125
 
 Console.Write("Pull a number: ");
-int N = int.Parse(Console.ReadLine());
+int N = Convert.ToInt32(Console.ReadLine());
 
 void PrintCubed(int n)
 {
