@@ -2,7 +2,7 @@
 // first N terms of Fibonacci numbers//
 // n = 7 => 0, 1, 1, 2, 3, 5, 8.
 
-int n = int.Parse(Console.ReadLine());
+int n = Convert.ToInt32(Console.ReadLine());
 
 void FibonacciNums(int n)
 {

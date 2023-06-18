@@ -1,7 +1,7 @@
 ﻿
 /*verevesti 10tichnoe chislp v 2ichnoe*/
 
-int number = int.Parse(Console.ReadLine());
+int number = Convert.ToInt32(Console.ReadLine());
 
 string ToBinary(int number)
 {
